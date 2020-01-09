@@ -1,13 +1,28 @@
 server:
   port: 8081
-
   
 spring:
   datasource:
       password:
       username: root
       url: jdbc:mysql://localhost:3306/fornecedor?useTimezone=true&serverTimezone=UTC
-      
+  application:
+    name: "fornecedor"
+  
   jpa:
     hibernate:
       ddl-auto: create
+      
+# configuração para q o serviço seja registrado ao eureka
+# não esquecer de incluir a dependencia Eureka Discover Client
+# Spring > edit starter
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+   
+
+          
