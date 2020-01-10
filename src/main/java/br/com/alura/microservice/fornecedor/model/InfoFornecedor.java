@@ -13,8 +13,14 @@ public class InfoFornecedor {// classe que realiza o mapeamento entidade X relac
 	private Long id;
 	private String nome;
 	private String estado;
+	private String endereco;
 	
-	
+	public String getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
 	public Long getId() {
 		return id;
 	}
