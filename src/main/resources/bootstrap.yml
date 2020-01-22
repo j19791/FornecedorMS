@@ -1,0 +1,11 @@
+#bootstrap.yml: Para que todas as configurações, principalmente as de banco de dados, estejam disponíveis antes do início do carregamento do contexto da nossa aplicação
+#O arquivo bootstrap.yml é carregado em um contexto com maior precedência: Bootstrap Application Context. É neste contexto que o Spring Cloud Config Client se conecta ao configuration server, baixa e disponibiliza as variáveis de ambiente para o Spring Application Context, que é o contexto da nossa aplicação. 
+
+spring:  
+  application:
+    name: "fornecedor"
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: http://localhost:8888    # config server
