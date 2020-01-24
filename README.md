@@ -12,3 +12,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+      
+      
+ # criando mais de uma instância de fornecedor
+ 
+ - Boot Dashboard - No microserviço, clicar com o botão direito em Duplicate Config.
+ - As instancias precisam estar em portas diferentes.
+ - Open Config >> arguments >> 
+ --server.port=8082 
